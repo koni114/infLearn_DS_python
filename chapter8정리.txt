@@ -1,5 +1,5 @@
-chapter8 : ÆÄÀÌ½ã°°Àº ÄÚµå ÀÛ¼ºÇÏ±â1
-# 1. split ÇÔ¼ö
+chapter8 : íŒŒì´ì¬ê°™ì€ ì½”ë“œ ìž‘ì„±í•˜ê¸°1
+# 1. split í•¨ìˆ˜
 items = "zero one two three'.split()
 print(items)
 
@@ -7,21 +7,23 @@ example = 'python,jquery,javascript'
 example.split(',')
 a, b, c = example.split(",")
 
-# 2. Join ÇÔ¼ö
+# 2. Join í•¨ìˆ˜
 colors = [ 'red', 'blue', 'green', 'yellow' ]
-result = ' '.join(colors)  # ¿¬°á ½Ã, ºóÄ­ 1Ä­À¸·Î ¿¬°á
+result = ' '.join(colors)  # ì—°ê²° ì‹œ, ë¹ˆì¹¸ 1ì¹¸ìœ¼ë¡œ ì—°ê²°
 print(result)
 
-# ** ¸Å¿ì Áß¿ä
+# ** ë§¤ìš° ì¤‘ìš”
 # List comprehensions
-- ±âÁ¸ÀÇ List¸¦ »ç¿ëÇÏ¿© °£´ÜÈ÷ ´Ù¸¥ List¸¦ ¸¸µå´Â ±â¹ý
-- Æ÷°ýÀûÀÎ List, Æ÷ÇÔµÇ´Â ¸®½ºÆ®¶ó´Â ÀÇ¹Ì·Î »ç¿ëµÊ
-- ÆÄÀÌ½ã¿¡¼­ °¡Àå ¸¹ÀÌ »ç¿ëµÇ´Â ±â¹ý Áß ÇÏ³ª
-- ÀÏ¹ÝÀûÀ¸·Î for + append º¸´Ù ¼Óµµ°¡ ºü¸§
+- ê¸°ì¡´ì˜ Listë¥¼ ì‚¬ìš©í•˜ì—¬ ê°„ë‹¨ížˆ ë‹¤ë¥¸ Listë¥¼ ë§Œë“œëŠ” ê¸°ë²•
+- í¬ê´„ì ì¸ List, í¬í•¨ë˜ëŠ” ë¦¬ìŠ¤íŠ¸ë¼ëŠ” ì˜ë¯¸ë¡œ ì‚¬ìš©ë¨
+- íŒŒì´ì¬ì—ì„œ ê°€ìž¥ ë§Žì´ ì‚¬ìš©ë˜ëŠ” ê¸°ë²• ì¤‘ í•˜ë‚˜
+- ì¼ë°˜ì ìœ¼ë¡œ for + append ë³´ë‹¤ ì†ë„ê°€ ë¹ ë¦„
 
 result = [i for i in range(10)]
 	
-- 2Áß Æ÷¹® °°Àº °æ¿ì´Â, ¿À¸¥ÂÊ¿¡ ÀÖ´Â°ÍÀÌ nested for ¹®
+- 2ì¤‘ í¬ë¬¸ ê°™ì€ ê²½ìš°ëŠ”, ì˜¤ë¥¸ìª½ì— ìžˆëŠ”ê²ƒì´ nested for ë¬¸
+- one dimensional ê°™ì€ ê²½ìš°ëŠ” ë’¤ì— ì˜¤ëŠ” forë¬¸ì´ nested forë¬¸ì´ê³   
+  two dimensional ê°™ì€ ê²½ìš°ëŠ” [] ì•ˆì— ë“¤ì–´ì˜¤ëŠ” forë¬¸ì´ nested forë¬¸
 word_1 = "hello"
 word_2 = "world"
 [ i+j for i in word_1 for j in word_2 ]   # one dimensional
@@ -29,10 +31,10 @@ word_2 = "world"
 
 word_1 = ["A", "B", "C"]
 word_2 = ["B", "C", "A"] 
-[ i+j for i in word_1 for j in word_2 if(i == j)]  °°Àº °Í¸¸ È£Ãâ
+[ i+j for i in word_1 for j in word_2 if(i == j)]  ê°™ì€ ê²ƒë§Œ í˜¸ì¶œ
 
-- 2Â÷¿ø ¹è¿­·Î ¸¸µé ¼öµµ ÀÖÀ½
-- ¸¹Àº ¿¬½À ÇÊ¿ä!
+- 2ì°¨ì› ë°°ì—´ë¡œ ë§Œë“¤ ìˆ˜ë„ ìžˆìŒ
+- ë§Žì€ ì—°ìŠµ í•„ìš”!
 
 words = 'The quick brown fox jumps over the lazy dog'.split()
 STUFF = [[w.upper(), w.lower(), len(w)] for w in words]
@@ -40,11 +42,11 @@ STUFF = [[w.upper(), w.lower(), len(w)] for w in words]
 for check in STUFF:
 print(check)
 
-- dict typeÀ¸·Îµµ »ý¼º °¡´É
+- dict typeìœ¼ë¡œë„ ìƒì„± ê°€ëŠ¥
 { i:j for i in word1 for j in word2 }
 
 ## Enumerate
-- ListÀÇ element¸¦ ÃßÃâÇÒ ¶§ ¹øÈ£¸¦ ºÙ¿©¼­ ÃßÃâ
+- Listì˜ elementë¥¼ ì¶”ì¶œí•  ë•Œ ë²ˆí˜¸ë¥¼ ë¶™ì—¬ì„œ ì¶”ì¶œ
 
 for i, j in enumerate(['tic', 'tac', 'toc']):
     print(i, j)
@@ -54,7 +56,7 @@ list(enumerate(mylist))
 { i:j for i, j in enumerate('GachonUniversity is an academic institute located'.split())}
 
 ## Zip
-- µÎ listÀÇ °ªÀ» º´·ÄÀûÀ¸·Î ÃßÃâÇÔ
+- ë‘ listì˜ ê°’ì„ ë³‘ë ¬ì ìœ¼ë¡œ ì¶”ì¶œí•¨
 
 list1 = [1,2,3]
 list2 = [2,3,4]
@@ -69,6 +71,6 @@ c = [100, 200, 300]
 [sum(x) for x in zip(a,b,c)] 
 
 *** Tip
-¿©·¯ ¹®ÀÚÀÇ Æ÷ÇÔ ¿©ºÎ¸¦ È®ÀÎÇÏ°í ½ÍÀ»¶§?
-set °ú intersection(&) ÀÌ¿ë! -> 
+ì—¬ëŸ¬ ë¬¸ìžì˜ í¬í•¨ ì—¬ë¶€ë¥¼ í™•ì¸í•˜ê³  ì‹¶ì„ë•Œ?
+set ê³¼ intersection(&) ì´ìš©! -> 
 
